@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://esennet.vercel.app/
+
+# Sitemaps
+Sitemap: https://esennet.vercel.app/sitemap.xml
