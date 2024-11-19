@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic';
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_SERVER,
   port: Number(process.env.SMTP_PORT),
-  secure: false, // false for non-SSL/TLS
+  
   auth: {
     user: process.env.FROM_EMAIL_GMAIL,
     pass: process.env.FROM_EMAIL_PASSWORD,
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
 
     // Send verification email with user's ID
 const mailOptions = {
-  from: process.env.FROM_EMAIL_GMAIL,
+  from: "embassadorsesen@gmail.com",
   to: email,
   subject: "ESENET Job Fair 2024 - Confirmation de votre inscription",
   html: `

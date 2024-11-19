@@ -269,7 +269,7 @@ const [modalContent, setModalContent] = useState("");
       {isLoading && ( 
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
          <div className=" p-6 rounded shadow-lg text-center">
-         <p className="text-xl font-bold bg-white">Submitting...</p>
+         <p className="text-xl font-bold text-white ">Submitting...</p>
         </div>
         </div>
 
