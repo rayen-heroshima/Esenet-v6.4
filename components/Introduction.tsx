@@ -14,7 +14,7 @@ export function Introduction() {
             src="/gallery/121.webp"
             alt="ecole"
             className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
+            
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#002b56]/50 to-transparent" />
         </div>
@@ -82,7 +82,7 @@ export function Introduction() {
             src="/gallery/999.webp"
             alt="ecole"
             className="object-cover  w-full h-full transform group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
+            
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#002b56]/50 to-transparent" />
         </div>
