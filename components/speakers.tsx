@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
+import Image from 'next/image';
 interface Testimonial {
   quote: string;
   name: string;
@@ -140,12 +140,13 @@ export function Speaker() {
             className="flex-shrink-0 min-w-[200px] max-w-[250px] flex flex-col items-center gap-4"
           >
             {/* Image circulaire */}
-            <div className="w-32 h-32 relative overflow-hidden rounded-full shadow-lg">
-              <img
+            <div className="w-32 h-32 relative overflow-hidden rounded-full shadow-lg w-full h-full">
+              <Image
                 src={src}
                 alt={name}
-                className="w-full h-full object-cover"
-                loading="lazy"
+                fill
+                style={{ objectFit: "cover" }} // Replace `objectFit` prop
+                priority={false} // Equivalent to "loading='lazy'" in Next.js
               />
             </div>
             

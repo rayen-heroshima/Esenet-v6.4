@@ -13,7 +13,7 @@ const nextConfig = {
         pathname: "/**", // matches any path
       },
     ],
-    unoptimized: true,
+    //unoptimized: true,
   },
   eslint: {
     ignoreDuringBuilds: true,

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 export function Introduction() {
   return (
     <section id="introduction" className="py-20 px-6 md:px-8 bg-white text-[#002b56]">
@@ -5,14 +6,15 @@ export function Introduction() {
         
         {/* Image Section */}
         <div
-          className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden group"
+          className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden group relative w-full h-full"
         >
-          <img
-            src="/gallery/121.webp"
-            alt="ecole"
-            className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
-            
-          />
+              <Image
+                src="/gallery/121.webp"
+                alt="ecole"
+                layout="fill" // Makes the image fill the parent container
+                objectFit="cover" // Ensures the image behaves like "object-cover"
+                className="transform group-hover:scale-110 transition-transform duration-700"
+              />
           <div className="absolute inset-0 bg-gradient-to-t from-[#002b56]/50 to-transparent" />
         </div>
         
@@ -78,13 +80,15 @@ export function Introduction() {
 
         {/* Image Section */}
         <div
-          className="relative h-auto md:h-[600px] rounded-2xl overflow-hidden group"
+          className="relative h-auto md:h-[600px] rounded-2xl overflow-hidden group relative w-full h-full"
         >
-          <img
-            src="/gallery/999.webp"
-            alt="ecole"
-            className="object-cover  w-full h-full transform group-hover:scale-110 transition-transform duration-700" 
-          />
+            <Image
+              src="/gallery/999.webp"
+              alt="ecole"
+              layout="fill" // Makes the image fill its parent container
+              objectFit="cover" // Ensures the image behaves like "object-cover"
+              className="transform group-hover:scale-110 transition-transform duration-700"
+            />
           <div className="absolute inset-0 bg-gradient-to-t from-[#002b56]/50 to-transparent" />
         </div>
       </div>

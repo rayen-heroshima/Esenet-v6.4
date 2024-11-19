@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
-
+import Image from 'next/image';
 
 interface TimeLeft {
   days: number;
@@ -109,19 +109,28 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div className={`h-[40rem] backdrop-blur-sm bg-black relative ${className || ""}`}>
       <div className="h-full w-full overflow-hidden relative">
+
+
         {images.map((image, index) => (
-          <motion.img
+          <motion.div
             key={index}
-            src={image}
-            alt={`Slide ${index + 1}`}
-            className={`absolute w-full h-full object-cover transition-opacity duration-700 ${
-              index === currentImageIndex ? "opacity-100" : "opacity-0"
-            }`}
+            className="absolute w-full h-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
             transition={{ duration: 0.8 }}
-          />
+          >
+            <Image
+              src={image}
+              alt={`Slide ${index + 1}`}
+              layout="fill" // Ensures the image covers the parent container, just like object-cover
+              objectFit="cover" // Ensures the image fills the container without distortion
+              className={`transition-opacity duration-700 ${
+                index === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          </motion.div>
         ))}
+
       </div>
 
       <motion.div
