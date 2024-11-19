@@ -147,16 +147,16 @@ const [modalContent, setModalContent] = useState("");
                 <option value="ENSI" className='text-black'>Ecole Nationale des Sciences de l Informatique (ENSI)</option>
                 <option value="ISAMM" className='text-black'>Institut Supérieur des Arts Multimédia de la Manouba (ISAMM)</option>
                 <option value="ESC" className='text-black'>Ecole Supérieure de Commerce(ESC)</option>
-                <option value="ISCAE" className='text-black'>Institut Supérieur de Comptabilité et d'Administration des Entreprises(ISCAE)</option>
+                <option value="ISCAE" className='text-black'>Institut Supérieur de Comptabilité et d&apos;Administration des Entreprises(ISCAE)</option>
                 <option value="TBS" className='text-black'>Tunisia Buisness school (TBS)</option>
-                <option value="ISI" className='text-black'>Institut Supérieur d'Informatique (ISI)</option>
+                <option value="ISI" className='text-black'>Institut Supérieur d&apos;Informatique (ISI)</option>
                 <option value="FST" className='text-black'>Mathématiques, informatique, sciences et technologie de la matière ( FST )</option>
                 <option value="ESSECT" className='text-black'>ESSECT</option>
                 <option value="IHEC" className='text-black'>Institut des Hautes Etudes Commerciales de Carthage (IHEC)</option>
                 <option value="ISGT" className='text-black'>ISG Tunis</option>
                 <option value="FSEGT" className='text-black'>Faculté des Sciences Economiques et de Gestion de Tunis (FSEGT)</option>
                 <option value="INSAT" className='text-black'> Institut National des Sciences Appliquées et de Technologie (INSAT)</option>
-                <option value="ISTIC" className='text-black'> Institut Supérieur des Technologies de l’Information et des Communications (ISTIC)</option>
+                <option value="ISTIC" className='text-black'> Institut Supérieur des Technologies de l&apos;Information et des Communications (ISTIC)</option>
                 <option value="SUPCOM" className='text-black'>Ecole Supérieure des Communications de Tunis (SUPCOM)</option>
                 <option value="ENSIT" className='text-black'>ENSIT</option>
                 <option value="autre" className='text-black'>autre</option>
@@ -169,17 +169,17 @@ const [modalContent, setModalContent] = useState("");
                 <option value="FSJPST" className='text-black'>Faculté des Sciences Juridiques, Politiques et Sociales de Tunis (FSJPST)</option>
                 <option value="ISSAT" className='text-black'>Institut Supérieur des Sciences Appliquées et de Technologie de Mateur (ISSAT)</option>
                 <option value="EPT" className='text-black'> Ecole Polytechnique de Tunisie (EPT)</option>
-                <option value="ENICar" className='text-black'>Ecole Nationale d’Ingénieurs de Carthage (ENICar)</option>
+                <option value="ENICar" className='text-black'>Ecole Nationale d&apos;Ingénieurs de Carthage (ENICar)</option>
                 <option value="ISES" className='text-black'>Institut Supérieur de l Education Spécialisée </option>
                 <option value="FLAH" className='text-black'>Faculté des Lettres, des Arts et des Humanités</option>
                 <option value="ISDT" className='text-black'>Institut Supérieur de Documentation de Tunis</option>
                 <option value="IBLV" className='text-black'>Institut Bourguiba des Langues Vivantes (IBLV)</option>
-                <option value="IPEIM" className='text-black'>Institut Préparatoire aux Eudes d'Ingénieurs El Manar (IPEIM)</option>
+                <option value="IPEIM" className='text-black'>Institut Préparatoire aux Eudes d&apos;Ingénieurs El Manar (IPEIM)</option>
                 <option value="ISSBAT" className='text-black'>Institut Supérieur des Sciences Biologiques Appliquées de Tunis (ISSBAT)</option>
                 <option value="ISSHT" className='text-black'>Institut Supérieur des Sciences Humaines de Tunis (ISSHT)</option>
                 <option value="ISSIT" className='text-black'>Institut Supérieur des Sciences Infirmières de Tunis (ISSIT)</option>
                 <option value="ISTMT" className='text-black'>Institut Supérieur des Technologies Médicales de Tunis (ISTMT)</option>
-                <option value="ENIT" className='text-black'>Ecole Nationale d'Ingénieurs de Tunis (ENIT)</option>
+                <option value="ENIT" className='text-black'>Ecole Nationale d&apos;Ingénieurs de Tunis (ENIT)</option>
                 <option value="FSHST" className='text-black'>FSHST</option>
                 <option value="IPEIT" className='text-black'>IPEIT</option>
                 <option value="ISBAT" className='text-black'>ISBAT</option>
@@ -202,10 +202,10 @@ const [modalContent, setModalContent] = useState("");
                 className="bg-white/10 border-white/20 text-white/50 placeholder:text-white/50 h-12 w-full rounded-md"
               >
                 <option value=""> &nbsp; Êtes-vous à la recherche de :</option>
-                <option value="stage" className='text-black'>D’un stage</option>
-                <option value="emploi" className='text-black'>D’un emploi</option>
-                <option value="apprentissage" className='text-black'>D’un apprentissage</option>
-                <option value="information" className='text-black'>D’informations</option>
+                <option value="stage" className='text-black'>D&apos;un stage</option>
+                <option value="emploi" className='text-black'>D&apos;un emploi</option>
+                <option value="apprentissage" className='text-black'>D&apos;un apprentissage</option>
+                <option value="information" className='text-black'>D&apos;informations</option>
               </select>
             </>
           )}
@@ -233,7 +233,7 @@ const [modalContent, setModalContent] = useState("");
                 <option value="stager" className='text-black'>De stagiaires</option>
                 <option value="networking" className='text-black'>De networking</option>
                 <option value="partenaires" className='text-black'>De partenaires</option>
-                <option value="information" className='text-black'>D’informations</option>
+                <option value="information" className='text-black'>D&apos;informations</option>
               </select>
             </>
           )}

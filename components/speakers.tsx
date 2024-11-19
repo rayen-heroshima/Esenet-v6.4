@@ -14,19 +14,19 @@ const testimonials: Testimonial[] = [
     quote:
       "The attention to detail and innovative features have completely transformed our workflow.",
     name: "Ameur Cherif",
-    designation: "Président de l'Université de la Manouba",
+    designation: "Président de l\'Université de la Manouba",
     src: "/speqkers/UMA.webp",
   },
   {
     quote:
-      "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+      "Outstanding support and robust features. It\'s rare to find a product that delivers on all its promises.",
     name: "Sarah Lamine",
     designation: "CEO Convergen",
     src: "/speqkers/sara.webp",
   },
   {
     quote:
-      "This solution has significantly improved our team's productivity.",
+      "This solution has significantly improved our team\'s productivity.",
     name: "Sofiene Hemissi",
     designation: "Ministre \n des Technologies de la Communication",
     src: "/speqkers/elwzir.webp",
@@ -77,7 +77,7 @@ const testimonials: Testimonial[] = [
     quote:
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Khaled Dridi",
-    designation: "Directeur d’investissement Startup UGFS",
+    designation: "Directeur d\'investissement Startup UGFS",
     src: "/speqkers/khaled.webp",
   },
   {

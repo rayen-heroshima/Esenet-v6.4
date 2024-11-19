@@ -4,7 +4,7 @@ import { Timeline } from "@/components/ui/timeline";
 export function EventProgram() {
   const data = [
     {
-      title: "8:30 - Ouverture",
+      title: "8:00 - Accueil et Check-in",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <div className="flex flex-col md:flex-row items-center gap-6">
@@ -13,7 +13,7 @@ export function EventProgram() {
               controls
               muted
               className="rounded-lg object-cover w-full h-48 md:h-72 lg:h-96 shadow-xl"
-              
+              poster="/planing/baha.webp"
             >
               <source src="/gallery/1115.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -23,15 +23,12 @@ export function EventProgram() {
       ),
     },
     {
-      title: "9:00 - Digital Business' Challenges",
+      title: "8:30 - L\'Odyssée Commence par un Arbre",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
-          <p className="text-white dark:text-neutral-200 text-base md:text-lg lg:text-xl font-medium mb-4 leading-relaxed">
-            Découvrez les dernières tendances et innovations dans le domaine du digital. Une présentation sur les défis actuels auxquels sont confrontées les entreprises et des stratégies pour réussir dans ce secteur.
-          </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/Busi.webp"
+              src="/planing/IMG_7930.webp"
               alt="Business Digital Panel"
               width={700}
               height={500}
@@ -43,7 +40,45 @@ export function EventProgram() {
       ),
     },
     {
-      title: "9:45 - Startup’Innov",
+      title: "9:00 - Ouverture",
+      content: (
+        <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <Image
+              src="/planing/Ouverture.webp"
+              alt="Ouverture"
+              width={700}
+              height={500}
+              className="rounded-lg object-cover w-full h-auto shadow-xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      ),
+    },
+    
+    {
+      title: "9:15 - Digital Business\' Challenges",
+      content: (
+        <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
+          <p className="text-white dark:text-neutral-200 text-base md:text-lg lg:text-xl font-medium mb-4 leading-relaxed">
+            Découvrez les dernières tendances et innovations dans le domaine du digital. Une présentation sur les défis actuels auxquels sont confrontées les entreprises et des stratégies pour réussir dans ce secteur.
+          </p>
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <Image
+              src="/planing/Business.webp"
+              alt="Business Digital Panel"
+              width={700}
+              height={500}
+              className="rounded-lg object-cover w-full h-auto shadow-xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "10:00 - Startup\'Innov",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <p className="text-white dark:text-neutral-200 text-base md:text-lg lg:text-xl font-medium mb-4 leading-relaxed">
@@ -51,7 +86,7 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/Startup'innov.webp"
+              src="/planing/Startup_innov.webp"
               alt="Startup Innov"
               width={700}
               height={500}
@@ -63,7 +98,7 @@ export function EventProgram() {
       ),
     },
     {
-      title: "10:30 - Pause Café",
+      title: "11:00 - Pause Café",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <div className="flex flex-col md:flex-row items-center gap-6">
@@ -80,7 +115,7 @@ export function EventProgram() {
       ),
     },
     {
-      title: "10:45 - Réso’Débat",
+      title: "11:30 - Réso\'Débat",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <p className="text-white dark:text-neutral-200 text-base md:text-lg lg:text-xl font-medium mb-4 leading-relaxed">
@@ -88,7 +123,7 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/Réso'Débat.webp"
+              src="/planing/Réso_Débat.webp"
               alt="Reso Débats"
               width={700}
               height={500}
@@ -100,7 +135,7 @@ export function EventProgram() {
       ),
     },
     {
-      title: "11:45 - Visite des Stands",
+      title: "12:30 - Visite des Stands",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <p className="text-white dark:text-neutral-200 text-base md:text-lg lg:text-xl font-medium mb-4 leading-relaxed">
