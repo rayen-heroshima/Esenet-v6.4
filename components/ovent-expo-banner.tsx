@@ -1,6 +1,3 @@
-
-
-
 import { Calendar, MessageSquare } from "lucide-react";
 import { Boxes } from "./ui/background-boxes";
 

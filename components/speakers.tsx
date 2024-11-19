@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
     quote:
       "This solution has significantly improved our team's productivity.",
     name: "Sofiene Hemissi",
-    designation: "Ministre des Technologies de la Communication",
+    designation: "Ministre \n des Technologies de la Communication",
     src: "/speqkers/elwzir.webp",
   },
   {
@@ -82,33 +82,44 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+
 export function Speaker() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll using CSS animation
+  // Optimized auto-scroll
   useEffect(() => {
     const scrollContainer = containerRef.current;
+    let animationFrame: number | null = null;
+
     if (scrollContainer) {
-      scrollContainer.style.scrollBehavior = "smooth";
-      const interval = setInterval(() => {
+      const scrollStep = () => {
         if (
           scrollContainer.scrollLeft + scrollContainer.offsetWidth >=
           scrollContainer.scrollWidth
         ) {
           scrollContainer.scrollLeft = 0;
         } else {
-          scrollContainer.scrollLeft += 1;
+          scrollContainer.scrollLeft += 1; // Adjust step size for smoother or faster scrolling
         }
-      }, 20);
+        animationFrame = requestAnimationFrame(scrollStep);
+      };
 
-      return () => clearInterval(interval);
+      animationFrame = requestAnimationFrame(scrollStep);
+
+      return () => {
+        if (animationFrame) cancelAnimationFrame(animationFrame);
+      };
     }
   }, []);
 
   return (
     <div className="flex flex-col items-center bg-slate-50 py-14">
       <h1 className="font-bold text-4xl lg:text-5xl">Intervenants de l'événement</h1>
-      <div className="overflow-hidden relative w-full mt-8" ref={containerRef}>
+      <div
+        className="overflow-hidden relative w-full mt-8"
+        ref={containerRef}
+        style={{ whiteSpace: "nowrap" }}
+      >
         <div className="flex w-max gap-6">
           {testimonials.map(({ src, name, designation }, idx) => (
             <div
@@ -121,9 +132,9 @@ export function Speaker() {
                   alt={name}
                   className="w-full h-[300px] object-cover rounded-t-lg"
                 />
-                <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-60 text-white p-4 opacity-0 hover:opacity-100 transition-opacity">
-                  <p className="text-xl font-semibold">{name}</p>
-                  <p className="text-md">{designation}</p>
+                <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-60 text-white p-8 opacity-0 hover:opacity-100 transition-opacity">
+                <p className="text-xl font-semibold">{name}</p>
+                <p className="text-md text-center break-words whitespace-pre-line">{designation}</p>
                 </div>
               </div>
             </div>
