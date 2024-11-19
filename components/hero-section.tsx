@@ -106,6 +106,7 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
             transition={{ duration: 0.8 }}
+            loading="lazy"
           />
         ))}
       </div>

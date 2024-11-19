@@ -12,6 +12,7 @@ export function EventProgram() {
               controls
               muted
               className="rounded-lg object-cover w-full h-48 md:h-72 lg:h-96 shadow-xl"
+              
             >
               <source src="/gallery/1115.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -29,11 +30,12 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/Busi.jpg"
+              src="/planing/Busi.webp"
               alt="Business Digital Panel"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
+              loading="lazy"
             />
           </div>
         </div>
@@ -53,6 +55,7 @@ export function EventProgram() {
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
+              loading="lazy"
             />
           </div>
         </div>
@@ -64,11 +67,12 @@ export function EventProgram() {
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/15.png"
+              src="/planing/15.webp"
               alt="Pause Café"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
+              loading="lazy"
             />
           </div>
         </div>
@@ -88,6 +92,7 @@ export function EventProgram() {
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
+              loading="lazy"
             />
           </div>
         </div>
@@ -107,6 +112,7 @@ export function EventProgram() {
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
+              loading="lazy"
             />
           </div>
         </div>
@@ -123,11 +129,12 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/INZAJ.jpg"
+              src="/planing/INZAJ.webp"
               alt="Atelier Certifié PMI"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
+              loading="lazy"
             />
           </div>
         </div>

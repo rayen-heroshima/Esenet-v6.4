@@ -50,7 +50,7 @@ const testimonials: Testimonial[] = [
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Sahar Mechri",
     designation: "Dir. Exécutive Magazine Managers",
-    src: "/speqkers/Sarahh.jpg",
+    src: "/speqkers/Sarahh.webp",
   },
   {
     quote:
@@ -78,10 +78,9 @@ const testimonials: Testimonial[] = [
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Khaled Dridi",
     designation: "Directeur d’investissement Startup UGFS",
-    src: "/speqkers/khaled.jpg",
+    src: "/speqkers/khaled.webp",
   },
 ];
-
 
 export function Speaker() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -127,14 +126,16 @@ export function Speaker() {
               className="flex-shrink-0 min-w-[300px] max-w-[350px] p-4 transition-transform duration-500 hover:scale-105"
             >
               <div className="relative overflow-hidden bg-white shadow-lg rounded-lg">
+                {/* Lazy Loading des images */}
                 <img
                   src={src}
                   alt={name}
                   className="w-full h-[300px] object-cover rounded-t-lg"
+                  loading="lazy"  // Attribut pour charger l'image uniquement quand elle est visible
                 />
                 <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-60 text-white p-8 opacity-0 hover:opacity-100 transition-opacity">
-                <p className="text-xl font-semibold">{name}</p>
-                <p className="text-md text-center break-words whitespace-pre-line">{designation}</p>
+                  <p className="text-xl font-semibold">{name}</p>
+                  <p className="text-md text-center break-words whitespace-pre-line">{designation}</p>
                 </div>
               </div>
             </div>
