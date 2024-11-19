@@ -30,6 +30,19 @@ export const metadata: Metadata = {
     
   ],
   robots: "index, follow",
+  openGraph: {
+    title: "Titre OpenGraph",
+    description: "Description OpenGraph.",
+    url: "https://votresite.vercel.app",
+    images: [
+      {
+        url: "https://votresite.vercel.app/image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Description de l'image",
+      },
+    ],
+  },
   
         
 };
