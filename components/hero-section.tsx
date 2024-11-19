@@ -42,12 +42,26 @@ const Countdown: React.FC = () => {
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
-  // Update timeLeft only on the client side
+  // Cache the timeLeft in localStorage or sessionStorage
   useEffect(() => {
-    setTimeLeft(calculateTimeLeft());
+    const cachedTimeLeft = localStorage.getItem("timeLeft");
+
+    if (cachedTimeLeft) {
+      setTimeLeft(JSON.parse(cachedTimeLeft)); // Load from cache if available
+    } else {
+      const calculatedTimeLeft = calculateTimeLeft();
+      if (calculatedTimeLeft) {
+        setTimeLeft(calculatedTimeLeft);
+        localStorage.setItem("timeLeft", JSON.stringify(calculatedTimeLeft)); // Save to cache
+      }
+    }
 
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      const newTimeLeft = calculateTimeLeft();
+      if (newTimeLeft) {
+        setTimeLeft(newTimeLeft);
+        localStorage.setItem("timeLeft", JSON.stringify(newTimeLeft)); // Update cache every second
+      }
     }, 1000);
 
     return () => clearInterval(timer);
@@ -106,7 +120,6 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
             transition={{ duration: 0.8 }}
-            loading="lazy"
           />
         ))}
       </div>
