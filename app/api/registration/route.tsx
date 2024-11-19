@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
               <li>Un point de contact vous accueillera à votre arrivée pour toute assistance logistique.</li>
               <li>Merci de préparer tout matériel promotionnel ou équipement nécessaire à votre stand.</li>
             </ul>
-            <p style="margin-top: 20px; font-size: 16px;">Pour toute question ou demande particulière, n'hésitez pas à nous contacter à l'adresse <a href="mailto:contact@esenet.tn" style="color: #004b6d; text-decoration: none;">contact@esenet.tn</a>.</p>
+            <p style="margin-top: 20px; font-size: 16px;">Pour toute question ou demande particulière, n'hésitez pas à nous contacter à l'adresse <a href="mailto:embassadorsesen@gmail.com" style="color: #004b6d; text-decoration: none;">embassadorsesen@gmail.com</a>.</p>
             <p style="margin-top: 20px; font-size: 16px;">Nous sommes impatients de vous accueillir et de faire de cet événement un succès retentissant !</p>
             <p style="margin-top: 20px; font-size: 16px;">Cordialement,<br>L'équipe ESENET</p>
           </div>
