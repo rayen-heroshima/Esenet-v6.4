@@ -9,6 +9,7 @@ export function EventProgram() {
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <video
+              preload="none"
               controls
               muted
               className="rounded-lg object-cover w-full h-48 md:h-72 lg:h-96 shadow-xl"
@@ -46,7 +47,7 @@ export function EventProgram() {
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <p className="text-white dark:text-neutral-200 text-base md:text-lg lg:text-xl font-medium mb-4 leading-relaxed">
-            Écoutez des start-ups tunisiennes partager leurs parcours inspirants, leurs innovations et leurs visions pour l’avenir.
+            Écoutez des start-ups tunisiennes partager leurs parcours inspirants, leurs innovations et leurs visions pour l&apos;avenir.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image

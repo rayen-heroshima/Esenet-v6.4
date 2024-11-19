@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/card';
+
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+
 import { Send } from 'lucide-react';
 
 
@@ -80,8 +80,7 @@ const [modalContent, setModalContent] = useState("");
           <h2 className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-white to-blue-200">
             Inscrivez vous
           </h2>
-          <Card className="p-8 bg-white/5 backdrop-blur-lg border-white/10">
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-8 p-8 bg-white/5 backdrop-blur-lg border-white/10 rounded-xl shadow-xl translate-y-[-2px] transition-all">
               <div className="grid md:grid-cols-2 gap-8">
                 <Input
                   name="nom"
@@ -143,7 +142,7 @@ const [modalContent, setModalContent] = useState("");
                 required
                 className="bg-white/10 border-white/20 text-white/50 placeholder:text-white/50 h-12 w-full rounded-md"
               >
-                <option value="" > &nbsp; Votre Etablissement d'affiliation?</option>
+                <option value="" > &nbsp; Votre Etablissement d&apos;affiliation?</option>
                 <option value="ESEN" className='text-black'>Ecole Supérieure de l Economie Numérique de la Manouba (ESEN)</option>
                 <option value="ENSI" className='text-black'>Ecole Nationale des Sciences de l Informatique (ENSI)</option>
                 <option value="ISAMM" className='text-black'>Institut Supérieur des Arts Multimédia de la Manouba (ISAMM)</option>
@@ -253,16 +252,16 @@ const [modalContent, setModalContent] = useState("");
                 <option value="socialMedia" className='text-black'>Sur les réseaux sociaux (Facebook, Instagram, LinkedIn)</option>
                 <option value="friend" className='text-black'>Par un(e) ami(e) ou un(e) collègue</option>
               </select>
-              <Button
+              <button
                 type="submit"
-                size="lg"
-                className="w-full bg-white text-[#001f3f] hover:bg-blue-50 h-12 text-lg font-semibold"
-                
+                className="
+                  w-full bg-white text-[#001f3f] hover:bg-blue-50 h-12 text-lg font-semibold rounded-lg 
+                  flex items-center justify-center gap-2
+                "
               >
-                Submit <Send className="ml-2 w-5 h-5" />
-              </Button>
+                Submit <Send className="w-5 h-5" />
+              </button>
             </form>
-          </Card>
         </motion.div>
       </div>
 

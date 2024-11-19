@@ -127,7 +127,7 @@ export function Speaker() {
 
   return (
     <div className="flex flex-col items-center bg-slate-50 py-14">
-      <h1 className="font-bold text-4xl lg:text-5xl">Intervenants de l'événement</h1>
+      <h1 className="font-bold text-4xl lg:text-5xl">Intervenants de l&apos;événement</h1>
       <div
         className="overflow-hidden relative w-full mt-8"
         ref={containerRef}
