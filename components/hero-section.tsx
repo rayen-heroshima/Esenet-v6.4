@@ -97,7 +97,7 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [images.length]);
