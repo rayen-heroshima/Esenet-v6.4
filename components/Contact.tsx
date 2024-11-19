@@ -21,7 +21,7 @@ export function Contact() {
     source: '',
   });
 
-const [modalContent, setModalContent] = useState("");
+  const [modalContent, setModalContent] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 

@@ -3,8 +3,7 @@ import { prisma } from "@/lib/prisma";
 import nodemailer from 'nodemailer';
 import { google } from "googleapis"
 
-// Disable static generation for this route
-export const dynamic = 'force-dynamic';
+
 
 // Nodemailer configuration
 const transporter = nodemailer.createTransport({

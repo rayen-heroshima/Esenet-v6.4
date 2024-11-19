@@ -13,10 +13,9 @@ export function EventProgram() {
               controls
               muted
               className="rounded-lg object-cover w-full h-48 md:h-72 lg:h-96 shadow-xl"
-              poster="/planing/baha.webp"
-            >
+              poster="planing/baha.webp">
               <source src="/gallery/1115.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              
             </video>
           </div>
         </div>
@@ -28,12 +27,12 @@ export function EventProgram() {
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/IMG_7930.webp"
+              src="planing/IMG_7930.webp"
               alt="Business Digital Panel"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
-              loading="lazy"
+              //loading="lazy"
             />
           </div>
         </div>
@@ -45,12 +44,12 @@ export function EventProgram() {
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/Ouverture.webp"
+              src="planing/Ouverture.webp"
               alt="Ouverture"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
-              loading="lazy"
+              //loading="lazy"
             />
           </div>
         </div>
@@ -66,12 +65,12 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/Business.webp"
+              src="planing/Business.webp"
               alt="Business Digital Panel"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
-              loading="lazy"
+              //loading="lazy"
             />
           </div>
         </div>
@@ -86,12 +85,12 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/Startup_innov.webp"
+              src="planing/Startup_innov.webp"
               alt="Startup Innov"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
-              loading="lazy"
+              //loading="lazy"
             />
           </div>
         </div>
@@ -103,12 +102,12 @@ export function EventProgram() {
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/15.webp"
+              src="planing/15.webp"
               alt="Pause Café"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
-              loading="lazy"
+              //loading="lazy"
             />
           </div>
         </div>
@@ -123,12 +122,12 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/Réso_Débat.webp"
+              src="planing/Réso_Débat.webp"
               alt="Reso Débats"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
-              loading="lazy"
+              //loading="lazy"
             />
           </div>
         </div>
@@ -143,12 +142,12 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/NETWORKING2.webp"
+              src="planing/NETWORKING2.webp"
               alt="Networking"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
-              loading="lazy"
+              //loading="lazy"
             />
           </div>
         </div>
@@ -165,12 +164,12 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/INZAJ.webp"
+              src="planing/INZAJ.webp"
               alt="Atelier Certifié PMI"
               width={700}
               height={500}
               className="rounded-lg object-cover w-full h-auto shadow-xl"
-              loading="lazy"
+              //loading="lazy"
             />
           </div>
         </div>
