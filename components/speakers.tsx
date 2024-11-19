@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface Testimonial {
   quote: string;
@@ -98,65 +98,40 @@ const testimonials: Testimonial[] = [
 
 export function Speaker() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [scrolling, setScrolling] = useState<boolean>(false);
-  const [startX, setStartX] = useState<number>(0);
-  const [scrollLeft, setScrollLeft] = useState<number>(0);
-  const [autoScroll, setAutoScroll] = useState<boolean>(true);
-  const scrollSpeed = 3; // How fast the auto scroll happens (higher number = slower speed)
 
-  // Auto-scrolling effect
+  // Optimized auto-scroll
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (autoScroll && containerRef.current) {
-        const maxScroll = containerRef.current.scrollWidth - containerRef.current.clientWidth;
-        containerRef.current.scrollLeft += scrollSpeed;
-        if (containerRef.current.scrollLeft >= maxScroll) {
-          containerRef.current.scrollLeft = 0;
+    const scrollContainer = containerRef.current;
+    let animationFrame: number | null = null;
+
+    if (scrollContainer) {
+      const scrollStep = () => {
+        if (
+          scrollContainer.scrollLeft + scrollContainer.offsetWidth >=
+          scrollContainer.scrollWidth
+        ) {
+          scrollContainer.scrollLeft = 0;
+        } else {
+          scrollContainer.scrollLeft += 1; // Adjust step size for smoother or faster scrolling
         }
-      }
-    }, 20); // This controls the speed of the auto-scroll (lower value = faster)
+        animationFrame = requestAnimationFrame(scrollStep);
+      };
 
-    return () => clearInterval(interval); // Cleanup the interval when component unmounts
-  }, [autoScroll]);
+      animationFrame = requestAnimationFrame(scrollStep);
 
-  // Mouse Drag Scrolling
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setScrolling(true);
-    setStartX(e.clientX);
-    if (containerRef.current) {
-      setScrollLeft(containerRef.current.scrollLeft);
+      return () => {
+        if (animationFrame) cancelAnimationFrame(animationFrame);
+      };
     }
-    setAutoScroll(false); // Stop auto-scrolling when dragging
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!scrolling || !containerRef.current) return;
-
-    const distance = e.clientX - startX;
-    containerRef.current.scrollLeft = scrollLeft - distance;
-  };
-
-  const handleMouseUp = () => {
-    setScrolling(false);
-    setAutoScroll(true); // Resume auto-scrolling when drag ends
-  };
-
-  const handleMouseLeave = () => {
-    setScrolling(false);
-    setAutoScroll(true); // Resume auto-scrolling when mouse leaves the carousel
-  };
+  }, []);
 
   return (
-    <div className="flex flex-col items-center bg-white py-14">
+    <div className="flex flex-col items-center bg-slate-50 py-14">
       <h1 className="font-bold text-4xl lg:text-5xl">Intervenants de l'événement</h1>
       <div
+        className="overflow-hidden relative w-full mt-8"
         ref={containerRef}
-        className="overflow-hidden relative w-full mt-8 cursor-grab"
         style={{ whiteSpace: "nowrap" }}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
       >
         <div className="flex w-max gap-6">
           {testimonials.map(({ src, name, designation }, idx) => (
@@ -170,7 +145,7 @@ export function Speaker() {
                   src={src}
                   alt={name}
                   className="w-full h-[300px] object-cover rounded-t-lg"
-                  loading="lazy" // Attribut pour charger l'image uniquement quand elle est visible
+                  loading="lazy"  // Attribut pour charger l'image uniquement quand elle est visible
                 />
                 <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-60 text-white p-8 opacity-0 hover:opacity-100 transition-opacity">
                   <p className="text-xl font-semibold">{name}</p>
