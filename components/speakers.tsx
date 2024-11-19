@@ -136,23 +136,26 @@ export function Speaker() {
         <div className="flex w-max gap-6">
           {testimonials.map(({ src, name, designation }, idx) => (
             <div
-              key={idx}
-              className="flex-shrink-0 min-w-[300px] max-w-[350px] p-4 transition-transform duration-500 hover:scale-105"
-            >
-              <div className="relative overflow-hidden bg-white shadow-lg rounded-lg">
-                {/* Lazy Loading des images */}
-                <img
-                  src={src}
-                  alt={name}
-                  className="w-full h-[300px] object-cover rounded-t-lg"
-                  loading="lazy"  // Attribut pour charger l'image uniquement quand elle est visible
-                />
-                <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-60 text-white p-8 opacity-0 hover:opacity-100 transition-opacity">
-                  <p className="text-xl font-semibold">{name}</p>
-                  <p className="text-md text-center break-words whitespace-pre-line">{designation}</p>
-                </div>
-              </div>
+            key={idx}
+            className="flex-shrink-0 min-w-[200px] max-w-[250px] flex flex-col items-center gap-4"
+          >
+            {/* Image circulaire */}
+            <div className="w-32 h-32 relative overflow-hidden rounded-full shadow-lg">
+              <img
+                src={src}
+                alt={name}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
+            
+            {/* Nom et désignation */}
+            <div className="text-center">
+              <p className="text-lg font-semibold">{name}</p>
+              <p className="text-sm text-gray-600 whitespace-pre-line">{designation}</p>
+            </div>
+          </div>
+          
           ))}
         </div>
       </div>
