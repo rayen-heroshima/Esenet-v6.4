@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://esennet.vercel.app/
+Host: https://esenet-jobfair2024.vercel.app/
 
 # Sitemaps
-Sitemap: https://esennet.vercel.app/sitemap.xml
+Sitemap: https://esenet-jobfair2024.vercel.app/sitemap.xml

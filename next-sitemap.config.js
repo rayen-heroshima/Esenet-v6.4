@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://esennet.vercel.app/",
+  siteUrl: "https://esenet-jobfair2024.vercel.app/",
   generateRobotsTxt: true, // Generate robots.txt
 };
