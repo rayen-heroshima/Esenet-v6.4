@@ -77,7 +77,7 @@ const testimonials: Testimonial[] = [
     quote:
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Khaled Dridi",
-    designation: "Directeur d’investissement Startup UGFS",
+    designation: "Directeur d'investissement Startup UGFS",
     src: "/speqkers/khaled.webp",
   },
 ];
@@ -113,7 +113,7 @@ export function Speaker() {
 
   return (
     <div className="flex flex-col items-center bg-slate-50 py-14">
-      <h1 className="font-bold text-4xl lg:text-5xl">Intervenants de l'événement</h1>
+      <h1 className="font-bold text-4xl lg:text-5xl">Intervenants de l&apos;événement</h1>
       <div
         className="overflow-hidden relative w-full mt-8"
         ref={containerRef}

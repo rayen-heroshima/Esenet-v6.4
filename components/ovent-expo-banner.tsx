@@ -34,14 +34,14 @@ export default function ESENetBanner() {
               ESENet Job Fair
             </h1>
             <p className="text-blue-400 text-lg mb-8">
-            Découvrez de nouvelles opportunités de carrière et connectez-vous avec des leaders de l'industrie.
+            Découvrez de nouvelles opportunités de carrière et connectez-vous avec des leaders de l&apos;industrie.
             </p>
 
             <div className="flex flex-col gap-6">
               <div className="flex items-start space-x-4">
                 <Calendar className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                 <p className="text-sm text-white">
-                Connectez-vous avec des entreprises de premier plan au cœur de l'innovation en tunisie.
+                Connectez-vous avec des entreprises de premier plan au cœur de l&apos;innovation en tunisie.
                 </p>
               </div>
               <div className="flex items-start space-x-4">

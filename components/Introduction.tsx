@@ -1,5 +1,5 @@
 
-import { Button } from '@/components/ui/button';
+//import { Button } from '@/components/ui/button';
 
 export function Introduction() {
   return (
@@ -23,23 +23,29 @@ export function Introduction() {
         <div
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-[#002b56] bg-clip-text text-transparent bg-gradient-to-r from-[#002b56] to-blue-400">
-            Bienvenue à l'ESEN
+            Bienvenue à l&apos;ESEN
           </h2>
           <p className="text-xl leading-relaxed mb-8 text-gray-600 text-justify">
-            L'École Supérieure d'Économie Numérique (ESEN) de l'Université de La Manouba (UMA), fondée en 2004 et réformée profondément en 2012, est un établissement d'enseignement supérieur qui s'est positionné dans un domaine de formation en évolution constante, à savoir l'économie numérique. Ainsi, l'ESEN a toujours porté dans ses gênes une capacité d'adaptation et une agilité exceptionnelles à répondre aux changements.
-            L'ESEN offre des licences et des mastères en E-Business, Business Intelligence, Systèmes d'information, Data Science, Veille et intelligence compétitive, et en contrôle de gestion digitalisé.
+            L&apos;École Supérieure d&apos;Économie Numérique (ESEN) de l&apos;Université de La Manouba (UMA), fondée en 2004 et réformée profondément en 2012, est un établissement d&apos;enseignement supérieur qui s&apos;est positionné dans un domaine de formation en évolution constante, à savoir l&apos;économie numérique. Ainsi, l&apos;ESEN a toujours porté dans ses gênes une capacité d&apos;adaptation et une agilité exceptionnelles à répondre aux changements.
+            L&apos;ESEN offre des licences et des mastères en E-Business, Business Intelligence, Systèmes d&apos;information, Data Science, Veille et intelligence compétitive, et en contrôle de gestion digitalisé.
           </p>
           <a
             href="https://www.esen.tn/portail/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button
-              size="lg"
-              className="bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-xl"
+
+            <button
+              className="
+                inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background  
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+                disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 
+                bg-blue-500 hover:bg-blue-600/90 h-11 px-8
+                text-white transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-xl
+              "
             >
-              Découvrez l'ESEN
-            </Button>
+              Découvrez l&apos;ESEN
+            </button>
           </a>
         </div>
       </div>
@@ -62,7 +68,7 @@ export function Introduction() {
             sera mis sur l’innovation et l’entrepreneuriat à l’ère du digital.  
             Cet événement permettra, d’une part, à nos partenaires actuels et ceux potentiels de découvrir 
             la spécificité de la formation interdisciplinaire offerte par l’ESEN. D’autre part, il permettra de 
-            donner une visibilité à nos diplômés auprès d’acteurs influents dans le domaine de l'économie 
+            donner une visibilité à nos diplômés auprès d’acteurs influents dans le domaine de l&apos;économie 
             numérique.  
             Le programme de la journée commence par une séance plénière au tour de la transformation 
             digitale en Tunisie. Après cette séance d’ouverture, des sessions thématiques suivront. La 

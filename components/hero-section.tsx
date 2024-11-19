@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
+//import { Button } from "./ui/button";
 
 interface TimeLeft {
   days: number;
@@ -48,7 +48,7 @@ const Countdown: React.FC = () => {
 
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    }, 1300);
 
     return () => clearInterval(timer);
   }, []);
@@ -56,7 +56,7 @@ const Countdown: React.FC = () => {
   if (!timeLeft) {
     return (
       <div className="text-white text-xl font-bold bg-blue-500/10 backdrop-blur-sm rounded-lg p-4 mt-6">
-        L'événement a commencé !
+        L&apos;événement a commencé !
       </div>
     );
   }
@@ -64,7 +64,7 @@ const Countdown: React.FC = () => {
   return (
     <div className="mt-8 mb-6">
       <div className="text-center mb-4">
-        <span className="text-blue-200 text-sm uppercase tracking-wider">L'événement commence dans</span>
+        <span className="text-blue-200 text-sm uppercase tracking-wider">L&apos;événement commence dans</span>
       </div>
       <div className="flex flex-wrap justify-center gap-2">
         <TimerComponent value={timeLeft.days} label="jours" />
@@ -83,7 +83,7 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -128,13 +128,18 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
 
         <Countdown />
 
-        <Button
+
+        <button
           onClick={scrollToBottom}
-          className="px-6 py-3 backdrop-blur-sm border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center rounded-full relative mt-4 hover:bg-blue-400/20 transition-all duration-300 hover:scale-105"
+          className="
+            px-4 py-2 backdrop-blur-sm border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center 
+            rounded-full relative mt-4 hover:bg-blue-400/20 transition-all duration-300 hover:scale-105
+          "
         >
-          <span className="text-lg">Inscrivez-vous maintenant →</span>
+          <span className="text-base">Inscrivez-vous maintenant →</span>
           <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-blue-500 to-transparent" />
-        </Button>
+        </button>
+
       </motion.div>
     </div>
   );

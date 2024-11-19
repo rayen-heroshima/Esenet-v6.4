@@ -5,7 +5,7 @@ export default {
   openGraph: {
     type: "website",
     locale: "tn_TN",
-    url: "https://esennet.vercel.app/",
+    url: "https://esenet-jobfair2024.vercel.app/",
     site_name: "ESENet",
   },
 };
