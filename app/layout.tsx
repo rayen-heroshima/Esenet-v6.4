@@ -33,10 +33,8 @@ export const metadata: Metadata = {
     "événements de carrière",
     "salon de l'emploi",
     "recrutement",
-    "carrières jeunes diplômés",
     "manouba université",
     "ESEN Tunisia",
-    "recrutement ESEN",
     "opportunités professionnelles",
     "industrie et recrutement",
     "formation professionnelle",
@@ -45,7 +43,6 @@ export const metadata: Metadata = {
     "Université Manouba recrutement",
     "étudiants ESEN Manouba",
     "stages et emplois étudiants",
-    "ESENet 2023",
   ],
   robots: "index, follow",
   openGraph: {
