@@ -94,13 +94,16 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images: string[] = ["/gallery/501.webp", "/gallery/10.webp", "/gallery/9.webp"];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
-    return () => clearInterval(interval);
-  }, [images.length]);
+  useEffect(() => {
+    if (!isMobile) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isMobile, images.length]);
 
   const scrollToBottom = useCallback(() => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
@@ -109,28 +112,35 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div className={`h-[40rem] backdrop-blur-sm bg-black relative ${className || ""}`}>
       <div className="h-full w-full overflow-hidden relative">
-
-
-        {images.map((image, index) => (
-          <motion.div
-            key={index}
+        {isMobile ? (
+          <Image
+            src={images[0]}
+            alt="Slide 1"
+            layout="fill"
+            objectFit="cover"
             className="absolute w-full h-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Image
-              src={image}
-              alt={`Slide ${index + 1}`}
-              layout="fill" // Ensures the image covers the parent container, just like object-cover
-              objectFit="cover" // Ensures the image fills the container without distortion
-              className={`transition-opacity duration-700 ${
-                index === currentImageIndex ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          </motion.div>
-        ))}
-
+          />
+        ) : (
+          images.map((image, index) => (
+            <motion.div
+              key={index}
+              className="absolute w-full h-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Image
+                src={image}
+                alt={`Slide ${index + 1}`}
+                layout="fill"
+                objectFit="cover"
+                className={`transition-opacity duration-700 ${
+                  index === currentImageIndex ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            </motion.div>
+          ))
+        )}
       </div>
 
       <motion.div

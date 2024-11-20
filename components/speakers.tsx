@@ -147,6 +147,7 @@ export function Speaker() {
                       fill
                       style={{ objectFit: "cover" }}
                       priority={false}
+                      loading='lazy'
                     />
 
               </div>

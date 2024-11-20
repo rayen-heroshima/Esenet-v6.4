@@ -65,6 +65,7 @@ export function HappySponsors() {
                   backgroundPosition: "center", // Center the image within the container
                   backgroundRepeat: "no-repeat", // Prevent the image from repeating
                 }}
+                
               ></div>
 
               {/* Hover overlay that darkens the image only on hover */}

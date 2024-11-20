@@ -88,6 +88,7 @@ export function Introduction() {
               layout="fill" // Makes the image fill its parent container
               objectFit="cover" // Ensures the image behaves like "object-cover"
               className="transform group-hover:scale-110 transition-transform duration-700"
+              
             />
           <div className="absolute inset-0 bg-gradient-to-t from-[#002b56]/50 to-transparent" />
         </div>
