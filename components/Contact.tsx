@@ -80,7 +80,7 @@ export function Contact() {
           <h2 className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-white to-blue-200">
             Inscrivez vous
           </h2>
-            <form onSubmit={handleSubmit} className="space-y-8 p-8 bg-white/5 backdrop-blur-lg border-white/10 rounded-xl shadow-xl translate-y-[-2px] transition-all">
+            <form onSubmit={handleSubmit} className="space-y-8 p-8 bg-white/5 border-white/10 rounded-xl shadow-xl translate-y-[-2px] transition-all">
               <div className="grid md:grid-cols-2 gap-8">
                 <Input
                   name="nom"

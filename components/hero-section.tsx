@@ -69,7 +69,7 @@ const Countdown: React.FC = () => {
 
   if (!timeLeft) {
     return (
-      <div className="text-white text-xl font-bold bg-blue-500/10 backdrop-blur-sm rounded-lg p-4 mt-6">
+      <div className="text-white text-xl font-bold bg-blue-500/10 rounded-lg p-4 mt-6">
         L&apos;événement a commencé !
       </div>
     );
@@ -107,7 +107,7 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
   }, []);
 
   return (
-    <div className={`h-[40rem] backdrop-blur-sm bg-black relative ${className || ""}`}>
+    <div className={`h-[40rem] bg-black relative ${className || ""}`}>
       <div className="h-full w-full overflow-hidden relative">
 
 
@@ -153,7 +153,7 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
         <button
           onClick={scrollToBottom}
           className="
-            px-4 py-2 backdrop-blur-sm border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center 
+            px-4 py-2 border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center 
             rounded-full relative mt-4 hover:bg-blue-400/20 transition-all duration-300 hover:scale-105
           "
         >
