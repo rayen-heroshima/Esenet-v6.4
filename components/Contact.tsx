@@ -2,9 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
-import { Input } from '@/components/ui/input';
-
 import { Send } from 'lucide-react';
 
 
@@ -69,7 +66,6 @@ export function Contact() {
 
   return (
     <section  className="content-visibility-auto py-32 px-4 md:px-8 bg-[#001f3f] relative overflow-hidden" >
-      <BackgroundLines />
       <div  className="max-w-3xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -82,40 +78,40 @@ export function Contact() {
           </h2>
             <form onSubmit={handleSubmit} className="space-y-8 p-8 bg-white/5 border-white/10 rounded-xl shadow-xl translate-y-[-2px] transition-all">
               <div className="grid md:grid-cols-2 gap-8">
-                <Input
+                <input
                   name="nom"
-                  placeholder="Nom"
+                  placeholder="&nbsp; &nbsp;Nom"
                   value={formData.nom}
                   onChange={handleChange}
                   required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50 h-12"
-                />
-                <Input
+                  className="bg-white/10 border-white/20 text-white/50 placeholder:text-white/50 h-12 w-full rounded-md"
+              />
+                <input
                   name="prenom"
-                  placeholder="Prénom"
+                  placeholder="&nbsp; &nbsp;Prénom"
                   value={formData.prenom}
                   onChange={handleChange}
                   required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50 h-12"
+                  className="bg-white/10 border-white/20 text-white/50 placeholder:text-white/50 h-12 w-full rounded-md"
                 />
               </div>
-              <Input
+              <input
                 name="email"
                 type="email"
-                placeholder="Adresse e-mail"
+                placeholder="&nbsp; &nbsp;Adresse e-mail"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/50 h-12"
+                className="bg-white/10 border-white/20 text-white/50 placeholder:text-white/50 h-12 w-full rounded-md"
               />
-              <Input
+              <input
                 name="Tele"
                 type="tel"
-                placeholder="Numéro de téléphone"
+                placeholder="&nbsp; &nbsp;Numéro de téléphone"
                 value={formData.Tele}
                 onChange={handleChange}
                 required
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/50 h-12"
+                className="bg-white/10 border-white/20 text-white/50 placeholder:text-white/50 h-12 w-full rounded-md"
               />
             <select
             name="vous"
@@ -290,31 +286,4 @@ export function Contact() {
 
 }
 
-function BackgroundLines() {
-  return (
-    <div className="absolute inset-0 opacity-10">
-      {[...Array(20)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute bg-blue-500"
-          animate={{
-            x: [0, Math.random() * 100, 0],
-            y: [0, Math.random() * 100, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            delay: i * 0.2,
-          }}
-          style={{
-            width: Math.random() * 300 + 50,
-            height: 2,
-            left: Math.random() * 100 + '%',
-            top: Math.random() * 100 + '%',
-            transform: 'rotate(' + Math.random() * 360 + 'deg)',
-          }}
-        />
-      ))}
-    </div>
-  );
-}
+

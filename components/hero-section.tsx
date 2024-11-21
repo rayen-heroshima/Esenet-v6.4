@@ -114,7 +114,7 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
         {images.map((image, index) => (
           <motion.div
             key={index}
-            className="absolute w-full h-full"
+            className="absolute h-full w-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
             transition={{ duration: 0.8 }}
@@ -122,8 +122,8 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
             <Image
               src={image}
               alt={`Slide `}
-              layout="fill" // Ensures the image covers the parent container, just like object-cover
-              objectFit="cover" // Ensures the image fills the container without distortion
+              fill={true}
+              style={{ objectFit: 'cover' }}
               className={`transition-opacity duration-700 ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}

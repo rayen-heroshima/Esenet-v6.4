@@ -60,25 +60,12 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-    backdrop-filter: none !important;
-    /* Disables backdrop-filter globally */
-  }
-
   body {
     @apply bg-background text-foreground;
   }
 
   /* Disable animations on mobile screens */
   @media (max-width: 768px) {
-    .disable-animations {
-      animation: none !important;
-    }
-  }
-
-  /* Disable animations in Safari */
-  @supports (-webkit-backdrop-filter: none) {
     .disable-animations {
       animation: none !important;
     }

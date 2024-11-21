@@ -86,9 +86,6 @@ const config = {
       },
     },
   },
-  corePlugins: {
-    backdropFilter: false, // Disable backdrop-filter utility
-  },
   plugins: [require("tailwindcss-animate"),require("tailwindcss-content-visibility"), addVariablesForColors],
 } satisfies Config;
 

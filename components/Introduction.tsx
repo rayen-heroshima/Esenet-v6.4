@@ -6,14 +6,16 @@ export function Introduction() {
         
         {/* Image Section */}
         <div
-          className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden group relative w-full h-full"
+          className=" md:h-[600px] rounded-2xl overflow-hidden group relative "
         >
               <Image
                 src="/gallery/121.webp"
                 alt="ecole"
-                layout="fill" // Makes the image fill the parent container
-                objectFit="cover" // Ensures the image behaves like "object-cover"
                 className="transform group-hover:scale-110 transition-transform duration-700"
+                fill={true}
+                style={{
+                objectFit: 'cover',
+                }}
               />
           <div className="absolute inset-0 bg-gradient-to-t from-[#002b56]/50 to-transparent" />
         </div>
@@ -80,13 +82,12 @@ export function Introduction() {
 
         {/* Image Section */}
         <div
-          className="relative h-auto md:h-[600px] rounded-2xl overflow-hidden group relative w-full h-full"
+          className="relative md:h-[600px] rounded-2xl overflow-hidden group w-full h-full"
         >
             <Image
               src="/gallery/999.webp"
               alt="ecole"
-              layout="fill" // Makes the image fill its parent container
-              objectFit="cover" // Ensures the image behaves like "object-cover"
+              fill={true}
               className="transform group-hover:scale-110 transition-transform duration-700"
               
             />
