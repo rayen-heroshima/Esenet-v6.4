@@ -107,8 +107,8 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
   }, []);
 
   return (
-    <div className={`h-[40rem] bg-black relative ${className || ""}`}>
-      <div className="h-full w-full overflow-hidden relative">
+    <div className={`relative h-[40rem] bg-black ${className || ""}`}>
+      <div className="relative h-full w-full overflow-hidden ">
 
 
         {images.map((image, index) => (
@@ -122,6 +122,7 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
             <Image
               src={image}
               alt={`Slide `}
+              //priority={true}
               fill={true}
               style={{ objectFit: 'cover' }}
               className={`transition-opacity duration-700 ${
@@ -152,9 +153,9 @@ const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
 
         <button
           onClick={scrollToBottom}
-          className="
+          className="relative
             px-4 py-2 border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center 
-            rounded-full relative mt-4 hover:bg-blue-400/20 transition-all duration-300 hover:scale-105
+            rounded-full mt-4 hover:bg-blue-400/20 transition-all duration-300 hover:scale-105
           "
         >
           <span className="text-base">Inscrivez-vous maintenant →</span>

@@ -6,13 +6,14 @@ export function Introduction() {
         
         {/* Image Section */}
         <div
-          className=" md:h-[600px] rounded-2xl overflow-hidden group relative "
+          className="relative md:h-[600px] rounded-2xl overflow-hidden group  "
         >
               <Image
                 src="/gallery/121.webp"
                 alt="ecole"
                 className="transform group-hover:scale-110 transition-transform duration-700"
                 fill={true}
+                sizes="(max-width: 768px) 100vw, 50vw" // Adjust these based on design
                 style={{
                 objectFit: 'cover',
                 }}
@@ -88,6 +89,7 @@ export function Introduction() {
               src="/gallery/999.webp"
               alt="ecole"
               fill={true}
+              sizes="(max-width: 768px) 100vw, 50vw" // Adjust these based on design
               className="transform group-hover:scale-110 transition-transform duration-700"
               
             />

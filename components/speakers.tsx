@@ -129,7 +129,7 @@ export function Speaker() {
     <div className="flex flex-col items-center bg-slate-50 py-14">
       <h1 className="font-bold text-4xl lg:text-5xl">Intervenants de l&apos;événement</h1>
       <div
-        className="overflow-hidden relative w-full mt-8"
+        className="relative overflow-hidden  w-full mt-8"
         ref={containerRef}
         style={{ whiteSpace: "nowrap" }}
       >
@@ -145,6 +145,7 @@ export function Speaker() {
                       src={src}
                       alt={name}
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       style={{ objectFit: "cover" }}
                       priority={false}
                       loading='lazy'
